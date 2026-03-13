@@ -1,4 +1,4 @@
-# HICONSY
+# 과제
 
 모바일 WebView 환경을 우선으로 설계한 문제 리스팅, 상세 조회, 검색, 등록, 삭제 서비스 과제 구현이다. 제공된 시안을 기반으로 `Next.js` App Router, `TanStack Query`, `Jotai`, `Tailwind CSS`, `shadcn/ui` 스타일 패턴을 사용해 구조 중심으로 작성했다.
 
