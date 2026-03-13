@@ -1,0 +1,159 @@
+# Cursor AI Project Rules
+
+## Core Rule
+
+Before implementing any feature, the AI must read:
+
+- `docs/ai/task.md`
+- `docs/ai/prd.md`
+- `docs/ai/architecture.md`
+- `docs/ai/coding.md`
+- `docs/ai/api.md`
+
+The AI must understand the project structure and requirements before generating code.
+
+---
+
+# Tech Stack
+
+The project uses the following stack:
+
+Web Framework
+
+* Next.js
+
+Mobile Framework
+
+* Flutter
+* React Native
+
+Data Fetching
+
+* TanStack Query
+
+State Management
+
+* Jotai
+
+Styling
+
+* TailwindCSS
+* Shadcn UI
+
+AI must follow best practices for each library.
+
+---
+
+# Development Workflow
+
+When implementing a feature, the AI must follow this process:
+
+1. Read task.md
+2. Understand requirements
+3. Review architecture.md
+4. Follow coding.md rules
+5. Check api.md for data contracts
+6. Implement the feature
+
+---
+
+# Architecture Rules
+
+Use Feature Based Architecture.
+
+Directory structure:
+
+src/app/
+src/components/
+src/features/
+src/hooks/
+src/lib/
+src/services/
+src/types/
+src/design-tokens/
+src/atoms/
+
+Each feature must be modular.
+
+---
+
+# State Management Rules
+
+Use Jotai for global state.
+
+Guidelines:
+
+* Use atoms for global state
+* Prefer local state when possible
+* Use derived atoms when needed
+* Do not duplicate TanStack Query server state inside Jotai
+
+---
+
+# Data Fetching Rules
+
+Use TanStack Query.
+
+Rules:
+
+* useQuery for GET
+* useMutation for POST / PUT / DELETE
+* Define clear query keys
+* Avoid duplicate requests
+
+Example:
+
+useQuery({
+queryKey: ["users"],
+queryFn: fetchUsers
+})
+
+---
+
+# UI Rules
+
+Use TailwindCSS and Shadcn UI.
+
+Guidelines:
+
+* Mobile first
+* Accessible UI
+* Reusable components
+* Consistent spacing
+* Use the design token system defined by the project docs
+* Keep styles aligned with shadcn/ui and Tailwind conventions
+
+---
+
+# Performance Rules
+
+The AI must consider:
+
+* Code splitting
+* Lazy loading
+* Memoization
+* Bundle size optimization
+
+---
+
+# Mobile Consideration
+
+The project may run inside WebView apps.
+
+Ensure:
+
+* Responsive layout
+* No blocking scripts
+* Lightweight components
+* WebView-safe interaction patterns
+
+---
+
+# Output Rule
+
+When implementing code:
+
+1. Explain briefly
+2. Provide full code
+3. Ensure TypeScript compatibility
+4. Follow architecture
